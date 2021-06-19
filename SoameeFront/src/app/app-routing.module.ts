@@ -6,10 +6,12 @@ import { BookComponent } from './components/book/book.component';
 import { BooksComponent } from './components/books/books.component';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', component: AuthorsComponent },
   { path: 'books', component: BooksComponent },
   { path: 'book/:id', component: BookComponent },
   { path: 'authors', component: AuthorsComponent },
-  { path: 'author/:id', component: AuthorComponent }
+  { path: 'author/:id', component: AuthorComponent },
+  { path: '**', redirectTo: '/authors' }
 ];
 
 @NgModule({
