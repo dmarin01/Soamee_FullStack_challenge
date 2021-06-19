@@ -1,1 +1,8 @@
-<p>books works!</p>
+<div class="container">
+    <div class="row">
+        <h1 class="my-4 d-flex justify-content-center">Colección de libros</h1>
+        <div class="m-1 col-4" style="max-width: 18rem;" *ngFor="let book of arrBooks">
+            <app-book [book]='book'></app-book>
+        </div>
+    </div>
+</div>

@@ -12,12 +12,12 @@ export class BookService {
     this.baseUrl = 'http://localhost:3000/api';
   }
 
-  //Metodo llamar todos los libros 
+  //Metodo llamar todos los libros *
   getAllBooks(): Promise<Book[]> {
     return this.httpClient.get<Book[]>(`${this.baseUrl}/books`).toPromise();
   }
 
-  //metodo filtrar un libro por id
+  //metodo filtrar un libro por id *
   getByIdBook(id): Promise<Book> {
     return this.httpClient.get<Book>(`${this.baseUrl}/book/${id}`).toPromise();
   }

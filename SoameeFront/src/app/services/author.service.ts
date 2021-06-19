@@ -14,12 +14,12 @@ export class AuthorService {
     this.baseUrl = 'http://localhost:3000/api';
   }
 
-  //Metodo llamar todos los autores - pagina de inicio
+  //Metodo llamar todos los autores - pagina de inicio *
   getAllAuthors(): Promise<Author[]> {
     return this.httpClient.get<Author[]>(`${this.baseUrl}/authors`).toPromise();
   }
 
-  //metodo filtrar autor por id
+  //metodo filtrar autor por id * 
   getByIdAuthor(id): Promise<Author> {
     return this.httpClient.get<Author>(`${this.baseUrl}/author/${id}`).toPromise();
   }

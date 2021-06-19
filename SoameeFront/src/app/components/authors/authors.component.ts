@@ -15,11 +15,10 @@ export class AuthorsComponent implements OnInit {
     this.arrAuthors = [];
   }
 
+  //inicializo todos los autores al cargar la ruta
   async ngOnInit() {
     const authors = await this.authorServices.getAllAuthors();
-
     this.arrAuthors = authors;
-
   }
 
 }
