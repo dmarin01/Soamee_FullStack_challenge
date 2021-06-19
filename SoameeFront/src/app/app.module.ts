@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthorComponent } from './components/author/author.component';
 import { BooksComponent } from './components/books/books.component';
+import { BookComponent } from './components/book/book.component';
+import { AuthorsComponent } from './components/authors/authors.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthorComponent,
-    BooksComponent
+    BooksComponent,
+    BookComponent,
+    AuthorsComponent
   ],
   imports: [
     BrowserModule,
