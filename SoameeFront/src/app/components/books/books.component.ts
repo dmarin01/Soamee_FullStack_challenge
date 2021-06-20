@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from 'src/app/interfaces/book.interface';
+import { BookService } from 'src/app/services/book.service';
 
 @Component({
   selector: 'app-books',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksComponent implements OnInit {
 
-  constructor() { }
+  arrBooks: Book[];
 
-  ngOnInit(): void {
+
+  constructor(private bookService: BookService) { }
+
+  //Inicializo todos los libros al  cargar la ruta
+  async ngOnInit() {
+    const books = await this.bookService.getAllBooks();
+    console.log(books);
+
+    this.arrBooks = books;
+
+
   }
 
 }
