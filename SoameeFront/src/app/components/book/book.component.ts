@@ -14,12 +14,11 @@ export class BookComponent implements OnInit {
 
   constructor(private bookService: BookService, private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.activatedRoute.params.subscribe(async (params) => {
       const routeID = params.id
 
       this.book = await this.bookService.getByIdBook(routeID);
-
     })
   }
 

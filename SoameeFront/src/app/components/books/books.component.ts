@@ -11,6 +11,7 @@ export class BooksComponent implements OnInit {
 
   arrBooks: Book[];
 
+
   constructor(private bookService: BookService) { }
 
   //Inicializo todos los libros al  cargar la ruta
@@ -19,6 +20,8 @@ export class BooksComponent implements OnInit {
     console.log(books);
 
     this.arrBooks = books;
+
+
   }
 
 }
