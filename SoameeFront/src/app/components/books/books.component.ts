@@ -17,11 +17,7 @@ export class BooksComponent implements OnInit {
   //Inicializo todos los libros al  cargar la ruta
   async ngOnInit() {
     const books = await this.bookService.getAllBooks();
-    console.log(books);
-
     this.arrBooks = books;
-
-
   }
 
 }

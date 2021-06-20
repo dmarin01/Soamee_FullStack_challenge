@@ -22,12 +22,12 @@ export class AuthorFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+  //envio el formulario con los valores añadidos en los campos
   async onSubmit() {
     const newAuthor = await this.authorServices.createAuthor(this.form.value);
     if (newAuthor) {
       this.form.reset();
-      this.router.navigate(['/authors'])
+      this.router.navigate(['/books'])
     }
 
   }

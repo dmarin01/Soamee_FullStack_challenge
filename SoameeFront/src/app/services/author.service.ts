@@ -24,13 +24,13 @@ export class AuthorService {
     return this.httpClient.get<Author>(`${this.baseUrl}/author/${id}`).toPromise();
   }
 
-  //metodo crear un nuevo autor
+  //metodo crear un nuevo autor ** 
   createAuthor(newAuthor: Author) {
     return this.httpClient.post(`${this.baseUrl}/author`, newAuthor).toPromise();
   }
 
 
-  //metodo actualizar datos de un autor
+  //metodo actualizar datos de un autor ** NO IMPLANTADO - MISMA FORMA QUE CREATEAUTHOR
   updateAuthor(id, value) {
     return this.httpClient.put(`${this.baseUrl}/author/${id}`, value).toPromise();
   }

@@ -22,13 +22,13 @@ export class BookService {
     return this.httpClient.get<Book>(`${this.baseUrl}/book/${id}`).toPromise();
   }
 
-  //metodo crear un nuevo libro
+  //metodo crear un nuevo libro *
   createBook(newBook: Book) {
     return this.httpClient.post(`${this.baseUrl}/book`, newBook).toPromise();
   }
 
 
-  //metodo actualizar datos de un libro
+  //metodo actualizar datos de un libro ** NO IMPLANTADO  - MISMO METODO QUE CREATEBOOK
   updateBook(id, value) {
     return this.httpClient.put(`${this.baseUrl}/book/${id}`, value).toPromise();
   }

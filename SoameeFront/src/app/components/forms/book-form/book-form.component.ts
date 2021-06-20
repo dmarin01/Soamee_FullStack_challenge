@@ -23,12 +23,14 @@ export class BookFormComponent implements OnInit {
     })
   }
 
+  //Capturo todos los autores para poder hacer select al añadir libro con su correspondiente autor
   async ngOnInit() {
     this.arrAuthors = await this.authorService.getAllAuthors();
 
 
   }
 
+  //Envio los datos del formularios para la base de datos
   async onSubmit() {
     const newBook = await this.bookServices.createBook(this.form.value);
     if (newBook) {
@@ -37,7 +39,7 @@ export class BookFormComponent implements OnInit {
     }
 
   }
-
+  //Valor de la fk del autor
   async onChange($event) {
     return $event.target.value;
   }

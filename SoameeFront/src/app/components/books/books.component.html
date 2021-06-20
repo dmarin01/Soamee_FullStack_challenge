@@ -1,8 +1,9 @@
 <div class="container">
     <div class="row">
         <h1 class="my-4 d-flex justify-content-center">Book collection</h1>
-        <div class="col-4 m-2 btn" style="max-width: 18rem;" *ngFor="let book of arrBooks">
-            <div class="card border-dark my-3 d-flex justify-content-center" style="max-width: 18rem;">
+        <div class="col-4 m-2 btn" style="max-width: 18rem;" *ngFor="let book of arrBooks"
+            [routerLink]="['/book', book.id]">
+            <div class="card border-primary my-3 d-flex justify-content-center" style="max-width: 18rem;">
                 <div class="card-body text-dark">
                     <h5 class="card-title">{{book.name}}</h5>
                 </div>

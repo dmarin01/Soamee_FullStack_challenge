@@ -10,16 +10,18 @@ import { BookService } from 'src/app/services/book.service';
 })
 export class BookComponent implements OnInit {
 
+
   @Input() book: Book;
+
 
   constructor(private bookService: BookService, private activatedRoute: ActivatedRoute) { }
 
+  //recogo el id a través de router link desde books.component
   async ngOnInit() {
     this.activatedRoute.params.subscribe(async (params) => {
-      const routeID = params.id
-
-      this.book = await this.bookService.getByIdBook(routeID);
+      const idBook = params.id;
+      this.book = await this.bookService.getByIdBook(idBook)
     })
   }
-
 }
+

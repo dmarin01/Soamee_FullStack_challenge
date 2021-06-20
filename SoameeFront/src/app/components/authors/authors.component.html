@@ -1,6 +1,7 @@
 <div class="container">
     <div class="row">
-        <div class="col-3 m-3" *ngFor="let author of arrAuthors">
+        <h1 class="my-4 d-flex justify-content-center">List of authors</h1>
+        <div class="btn col-sm-3 m-3" *ngFor="let author of arrAuthors" [routerLink]="['/author', author.id]">
             <div class="card border-warning m-3" style="max-width: 18rem;">
                 <div class="card-header">Author</div>
                 <div class="card-body">

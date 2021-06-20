@@ -17,11 +17,11 @@ export class AuthorComponent implements OnInit {
   //inicializo el autor por id en ruta
   ngOnInit() {
     this.activatedRoute.params.subscribe(async (params) => {
-      const routeID = params.id
+      const routeID = params.id;
 
-      this.author = await this.authorService.getByIdAuthor(routeID);
-
+      this.author = await this.authorService.getByIdAuthor(routeID)
     })
+
   }
 
 }
