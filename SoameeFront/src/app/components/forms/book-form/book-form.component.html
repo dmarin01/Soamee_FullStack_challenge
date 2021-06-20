@@ -10,13 +10,14 @@
                 <label class="form-label">ISBN</label>
                 <input type="text" class="form-control" formControlName="isbn">
             </div>
-            <!-- <div class="mb-3">
+            <div class="mb-3">
                 <label class="form-label">Author</label>
-                <select (change)="onChange($event)">
-                    <option value="all">Select author</option>
-                    <option *ngFor="let author of arrAuthors" [value]="author">{{author}}</option>
+                <select class="form-control" (change)="onChange($event)" formControlName="fk_author">
+                    <option value="" disabled>Select author</option>
+                    <option *ngFor="let author of arrAuthors" [value]="author.id">
+                        {{author.first_name}} {{author.last_name}}</option>
                 </select>
-            </div> -->
+            </div>
             <button class="mt-3 btn btn-outline-primary">Send</button>
         </form>
     </div>

@@ -1,14 +1,12 @@
 <div class="container">
     <div class="row">
-        <h1 class="mt-4 d-flex justify-content-center col-4"> Lists of authors</h1>
-        <button class="col-2 btn btn-info mt-4 me-5" routerLink="/createAuthor">Add new author</button>
-        <button class="col-2 btn btn-info mt-4 me-5" routerLink="/createBook">Add new book</button>
-
-    </div>
-
-    <div class="row">
         <div class="col-3 m-3" *ngFor="let author of arrAuthors">
-            <app-author [author]="author"></app-author>
+            <div class="card border-warning m-3" style="max-width: 18rem;">
+                <div class="card-header">Author</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{author.first_name}} {{author.last_name}}</h5>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -25,7 +25,7 @@ export class BookFormComponent implements OnInit {
 
   async ngOnInit() {
     this.arrAuthors = await this.authorService.getAllAuthors();
-    console.log(this.arrAuthors);
+
 
   }
 
@@ -39,16 +39,7 @@ export class BookFormComponent implements OnInit {
   }
 
   async onChange($event) {
-    console.log($event.target.value);
-
-    if ($event.target.value === 'all') {
-      console.log(this.arrAuthors);
-      this.arrAuthors = await this.authorService.getAllAuthors();
-
-    }
-    /* if ($event.target.value !== 'all') {
-      this.arrAuthors = await this.authorService.getByIdAuthor($event.target.value)
-    } */
+    return $event.target.value;
   }
 
 }
